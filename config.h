@@ -40,7 +40,7 @@ struct aqconfig
   unsigned char device_id;
   unsigned char rssa_device_id;
   int16_t paneltype_mask;
-#if defined AQ_ONETOUCH || defined AQ_IAQTOUCH
+#if defined AQ_ONETOUCH || defined AQ_IAQTOUCH || defined AQ_PDA
   unsigned char extended_device_id;
   bool extended_device_id_programming;
 #endif

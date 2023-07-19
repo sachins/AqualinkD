@@ -1154,7 +1154,7 @@ int startup(char *self, char *cfgFile)
   _cfgFile = cfgFile;
   //initButtons(&_aqualink_data);
   
-  sprintf(_aqualink_data.self, basename(self));
+  sprintf(_aqualink_data.self, "%s", basename(self));
   clearDebugLogMask();
   read_config(&_aqualink_data, cfgFile);
 

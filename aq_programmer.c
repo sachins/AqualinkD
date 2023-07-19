@@ -49,6 +49,7 @@
 bool select_sub_menu_item(struct aqualinkdata *aq_data, char* item_string);
 bool select_menu_item(struct aqualinkdata *aq_data, char* item_string);
 //void send_cmd(unsigned char cmd, struct aqualinkdata *aq_data);
+void send_cmd(unsigned char cmd);
 void cancel_menu();
 
 
@@ -77,12 +78,12 @@ void *get_aqualink_onetouch_setpoints( void *ptr );
 
 bool waitForButtonState(struct aqualinkdata *aq_data, aqkey* button, aqledstate state, int numMessageReceived);
 
-//bool waitForMessage(struct aqualinkdata *aq_data, char* message, int numMessageReceived);
+bool waitForMessage(struct aqualinkdata *aq_data, char* message, int numMessageReceived);
 bool waitForEitherMessage(struct aqualinkdata *aq_data, char* message1, char* message2, int numMessageReceived);
 
 bool push_aq_cmd(unsigned char cmd);
-//void waitfor_queue2empty();
-//void longwaitfor_queue2empty();
+void waitfor_queue2empty();
+void longwaitfor_queue2empty();
 
 void _aq_programmer(program_type r_type, char *args, struct aqualinkdata *aq_data, bool allowOveride);
 
